@@ -4,7 +4,9 @@
     <router-link :to="{name: 'first'}">First</router-link> |
     <router-link :to="{name: 'second'}">Second</router-link> |
     <p>{{ this.$route.query.q }}</p>
-    <router-view/>
+    <transition name="shake" mode="out-in">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
